@@ -7,6 +7,7 @@ public class PositiveNumber{
 		boolean getNumber= false;
 		
 		int numb;
+		int total=0;
 		
 		do{
 			
@@ -15,7 +16,11 @@ public class PositiveNumber{
 			
 			if(numb < 0){
 					getNumber = !getNumber;
+			}else{
+				total = total + numb;
 			}
 		}while(!getNumber);
+		
+		System.out.println("Total is :" + total);
 	}
 }
