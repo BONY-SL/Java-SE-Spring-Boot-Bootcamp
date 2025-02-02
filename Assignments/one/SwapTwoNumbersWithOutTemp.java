@@ -1,3 +1,5 @@
+package one;
+
 public class SwapTwoNumbersWithOutTemp{
 	
 	public static void main(String[] args){

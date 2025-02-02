@@ -1,3 +1,5 @@
+package one;
+
 import java.util.*;
 public class SumAndAvg{
 
