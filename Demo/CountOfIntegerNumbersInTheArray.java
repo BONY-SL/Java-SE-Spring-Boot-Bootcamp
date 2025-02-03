@@ -2,7 +2,7 @@ public class CountOfIntegerNumbersInTheArray {
 
     public static void main(String[] args) {
 
-        int[] arr1 = {10,20,30,40,53,64};
+        int[] arr1 = {10,25,30,40,53,64};
         int[] arr2 = {1,2,3,4,5};
 
         int arrayOneIntegerCount;
