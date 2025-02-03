@@ -1,6 +1,6 @@
 public class ArraysSum {
 
-      static int sum = 0;
+    static int sum;
 
     public static void main(String[] args) {
 
