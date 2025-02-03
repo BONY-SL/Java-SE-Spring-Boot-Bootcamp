@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class ArrayHaveSearchNumber {
+
     public static void main(String[] args) {
 
         int [] array = {10,25,30,40,53,64};
