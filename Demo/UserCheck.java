@@ -33,7 +33,7 @@ public class UserCheck {
             System.out.println("C :"+countC);
 
         }else {
-            System.out.println("Login Field");
+            System.out.println("Login Failed");
         }
 
     }
