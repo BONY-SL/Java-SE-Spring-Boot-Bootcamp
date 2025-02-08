@@ -3,7 +3,7 @@ package three.ticketbook;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Demo {
+public class DemoBooking {
 
     static ArrayList<TicketBooking> ticketBookings = new ArrayList<>();
 
@@ -14,20 +14,20 @@ public class Demo {
         int choice;
         while (true) {
             System.out.println("***Select Movie***");
-            System.out.println("[1] Avatar\n[2] Titanic\n[3] Inception\n[4]Exit\n");
+            System.out.println("[0] Avatar\n[1] Titanic\n[2] Inception\n[3]Exit\n");
 
             System.out.print("Select Move or Exit : ");
             choice = new Scanner(System.in).nextInt();
 
             switch (choice) {
-                case 4:
+                case 3:
                     System.exit(1);
                 case 0:
                 case 1:
                 case 2:
                     System.out.println("Have " + ticketBookings.get(choice).getSeatLimit() + " Seats Avalable");
-                    Demo demo = new Demo();
-                    demo.bookTicket(choice);
+                    DemoBooking demoBooking = new DemoBooking();
+                    demoBooking.bookTicket(choice);
                     break;
                 default:
                     System.out.println("Invalid Input");
