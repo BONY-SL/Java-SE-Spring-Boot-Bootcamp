@@ -9,6 +9,33 @@ public class Demo {
 
     public static void main(String[] args) {
 
+        initializeMovies();
+
+        int choice;
+        while (true) {
+            System.out.println("***Select Movie***");
+            System.out.println("[1] Avatar\n[2] Titanic\n[3] Inception\n[4]Exit\n");
+
+            System.out.print("Select Move or Exit : ");
+            choice = new Scanner(System.in).nextInt();
+
+            switch (choice) {
+                case 4:
+                    System.exit(1);
+                case 0:
+                case 1:
+                case 2:
+                    System.out.println("Have " + ticketBookings.get(choice).getSeatLimit() + " Seats Avalable");
+                    Demo demo = new Demo();
+                    demo.bookTicket(choice);
+                    break;
+                default:
+                    System.out.println("Invalid Input");
+                    break;
+            }
+        }
+    }
+    private static void initializeMovies() {
 
         TicketBooking moveOne = new TicketBooking();
         moveOne.setMoveName("Avatar");
@@ -20,34 +47,43 @@ public class Demo {
         moveTwo.setSeatLimit(50);
         ticketBookings.add(moveTwo);
 
-        TicketBooking moveTree = new TicketBooking();
-        moveTree.setMoveName("Inception");
-        moveTree.setSeatLimit(50);
-        ticketBookings.add(moveTree);
+        TicketBooking moveThree = new TicketBooking();
+        moveThree.setMoveName("Inception");
+        moveThree.setSeatLimit(50);
+        ticketBookings.add(moveThree);
+    }
 
-        int choice;
-        int getTicket;
-        while (true){
-            System.out.println("***Select Movie***");
-            System.out.println("[1] Avatar\n[2] Titanic\n[3] Inception\n[0]Exit\n");
+    private void bookTicket(int choice) {
 
-            System.out.print("Select Move or Exit : ");
-            choice = new Scanner(System.in).nextInt();
+        int isBookTicket;
 
-            switch (choice){
-                case 4:
-                    System.exit(1);
-                case 0:
-                case 1:
-                case 2:
-                    System.out.println("Have " +ticketBookings.get(choice).getSeatLimit()+" Seats Avalable");
-                    Demo demo = new Demo();
-                    // demo.bookTicket(choice);
+        String  isBook;
+
+        System.out.print("Do You Like Book a Ticket for "+ticketBookings.get(choice).getMoveName()+" Movie");
+        System.out.println("yes or no (Press y/n)");
+        isBook = new Scanner(System.in).nextLine();
+
+        if(isBook.equalsIgnoreCase("y")){
+
+            while(true){
+                System.out.println("Please How Many Tickets do you Want : ");
+                isBookTicket = new Scanner(System.in).nextInt();
+
+                if(isBookTicket > ticketBookings.get(choice).getSeatLimit()){
+                    System.out.println("Can not Book....Current Have "+ticketBookings.get(choice).getSeatLimit()+" available");
+                }else {
+                    TicketBooking ticketBooking = ticketBookings.get(choice);
+                    ticketBooking.setSeatLimit(ticketBooking.getSeatLimit()-isBookTicket);
+                    ticketBookings.set(choice,ticketBooking);
+                    System.out.println("Ticket Book Success !");
+                    main(null);
                     break;
-                default:
-                    System.out.println("Invalid Input");
-                    break;
+                }
             }
+
+
+        } else if (isBook.equalsIgnoreCase("n")) {
+            main(null);
         }
     }
 }
