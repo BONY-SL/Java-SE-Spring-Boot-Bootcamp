@@ -3,7 +3,6 @@ package day09;
 import java.util.Scanner;
 
 public class StudentDemoCode {
-
     public static void main(String[] args) {
 
         Student [] students = new Student[10];
