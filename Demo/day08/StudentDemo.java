@@ -1,5 +1,7 @@
 package day08;
 
+import day09.Student;
+
 import java.util.ArrayList;
 
 public class StudentDemo {
