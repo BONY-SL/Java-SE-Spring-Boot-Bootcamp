@@ -2,8 +2,8 @@ package demo.car;
 
 public class Car {
 
-    private  Integer registerdID;
-    private  String model;
+    private Integer registerdID;
+    private String model;
     private String color;
     private String manufactureYear;
     private String brand;
@@ -79,4 +79,10 @@ public class Car {
                 "Brand : "+this.getBrand()+ "\n";
     }
 
+    public static void main(String[] args) {
+
+        System.out.println(1);
+        Car c = new Car();
+
+    }
 }
