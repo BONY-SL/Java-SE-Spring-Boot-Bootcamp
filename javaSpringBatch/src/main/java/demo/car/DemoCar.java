@@ -8,10 +8,7 @@ public class DemoCar {
 
     public static void main(String[] args) {
 
-
         System.out.println(1);
         Car car1 = new Car();
-
-
     }
 }
