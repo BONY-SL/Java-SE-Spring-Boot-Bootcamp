@@ -9,9 +9,6 @@ public class Account {
     private AccountType accountType;
     private double currentBalance;
 
-    public Account(){
-
-    }
 
     public Integer getAccountID() {
         return accountID;
