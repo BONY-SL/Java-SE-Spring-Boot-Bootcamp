@@ -25,5 +25,7 @@ public class Main {
         System.out.println(a1.a);
         System.out.println(a2.a);
 
+        a1.mB();
+
     }
 }
