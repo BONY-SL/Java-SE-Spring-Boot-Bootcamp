@@ -1,6 +1,6 @@
 package com.example.generics;
 
-public class Box <T>{
+public class Box <T extends Number>{ // bounded type generics
 
     private T item;
 
