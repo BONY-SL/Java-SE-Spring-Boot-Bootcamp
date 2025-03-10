@@ -58,6 +58,4 @@ public class HelloController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-    }
 }
