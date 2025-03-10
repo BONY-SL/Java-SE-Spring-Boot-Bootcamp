@@ -39,23 +39,24 @@ public class HelloController {
         try {
             PreparedStatement insertStudent = connection.prepareStatement
                     ("INSERT INTO Student(Name,Address,ContactNumber,Age)" +
-                    "VALUES (?,?,?,?)");
+                            "VALUES (?,?,?,?)");
 
-            insertStudent.setString(1,student.getName());
-            insertStudent.setString(2,student.getAddress());
-            insertStudent.setString(3,student.getContact());
-            insertStudent.setInt(4,student.getAge());
+            insertStudent.setString(1, student.getName());
+            insertStudent.setString(2, student.getAddress());
+            insertStudent.setString(3, student.getContact());
+            insertStudent.setInt(4, student.getAge());
 
             int rowCount = insertStudent.executeUpdate();
 
-            if(rowCount > 0){
+            if (rowCount > 0) {
                 System.out.println("Student Record Added Successfully");
                 DatabaseConnection.closeConnection();
-            }else {
+            } else {
                 System.out.println("Not Inserted Record");
             }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
 }
