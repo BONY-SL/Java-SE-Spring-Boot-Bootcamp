@@ -31,5 +31,4 @@ public class VehicleServlet extends HttpServlet {
         resp.getWriter().println("Vehicle Servlet........... DELETE");
     }
 
-
 }
